@@ -1,5 +1,5 @@
 # task 2
-# Create example db
+### Create example db
 **CREATE** **TABLE** ext (
     name text,
     status int
@@ -26,17 +26,17 @@
 **VALUES** ('nazv5445.mp3');
 
 
-# Look db content
+### Look db content
 **SELECT** ***** **FROM** ext;
 **SELECT** ***** **FROM** no_ext;
 
-# match same names with no extension 
+### match same names with no extension 
 **SELECT** e.name, e.status, n.status **FROM** ext e **INNER** **JOIN** no_ext n **ON** substring(e.name, n.name)=n.name;
 
-# METHOD 1
-# for better performance set INDEX on column name on both tables.
+## METHOD 1
+#### for better performance set INDEX on column name on both tables.
 
-# using subq
+### using subq
 **UPDATE** ext
 **SET** status = 
   (
