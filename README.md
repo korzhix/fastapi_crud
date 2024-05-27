@@ -1,3 +1,7 @@
+# task 1 
+    1. clone this repo and cd to it
+    2. run docker compose up
+
 # task 2
 ### Create example db
 
