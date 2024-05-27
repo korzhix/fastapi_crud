@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:latest
+    container_name: redis_db
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    expose:
+      - 6379
+  api:
+    build:
+      context: .
+    container_name: fastapi_crud
+    ports:
+      - 80:8000
+    depends_on:
+      - redis

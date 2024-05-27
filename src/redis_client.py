@@ -2,7 +2,7 @@ import redis.asyncio as redis
 
 from fastapi import Depends
 from typing import Annotated
-from src import config
+import config
 
 
 async def get_redis_connection(settings: Annotated[config.Settings, Depends(config.get_settings)]) -> redis.Redis:

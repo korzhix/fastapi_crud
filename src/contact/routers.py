@@ -6,7 +6,7 @@ from redis.asyncio import Redis
 from pydantic_extra_types.phone_numbers import PhoneNumber
 
 from .schemas import Contact, Address
-from .redis_client import get_redis_connection
+from redis_client import get_redis_connection
 
 contacts_router = APIRouter(tags=['Contacts'])
 
